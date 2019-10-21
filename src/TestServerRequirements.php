@@ -13,7 +13,7 @@ class TestServerRequirements extends SapphireTest
 		$_SERVER['HTTP_HOST'] = 'localhost';
 		$_SERVER['SCRIPT_FILENAME'] = __FILE__;
 		
-		$checker = new ServerRequirementsChecker(false); // TODO: Make it possible to configure to enable database checks during unit testing. Now it's just assumed that we do not have a db connection while doing unit tests.
+		$checker = new ServerRequirementsChecker();
 		$errors = $checker->getErrors();
 		$errors_string = print_r($errors, true);
 		$this->assertEmpty($errors, "Server environment errors detected. To pass this test, the list of errors should be empty. Errors:\n$errors_string");
