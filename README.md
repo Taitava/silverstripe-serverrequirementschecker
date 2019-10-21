@@ -28,7 +28,7 @@ php vendor/silverstripe/framework/cli-script.php /dev/tasks/Taitava-ServerRequir
 
 
 ## Future plans
- - Create a unit test class which iterates all server environment checks and asserts that they have passed. This would make it easy to integrate environment checks to other testing.
+ - None at the moment.
 
 Have your own ideas? Please let me know in the issues! :) Pull requests are also welcome.
 
