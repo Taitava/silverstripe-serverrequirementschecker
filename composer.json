@@ -1,7 +1,7 @@
 {
     "name": "taitava/silverstripe-serverrequirementschecker",
     "description": "A BuildTask for SilverStripe which allows for easy checking that the current server environment still meets the requirements defined by the standard SilverStripe installation process.",
-    "type": "silverstripe-vendormodule",
+    "type": "silverstripe-module",
     "keywords": ["silverstripe"],
 	"license": "MIT",
     "authors": [
@@ -12,7 +12,7 @@
     ],
     "require":
     {
-        "silverstripe/framework": "^4.0",
+        "silverstripe/framework": "^3.1"
     },
     "extra": {
         "installer-name": "serverrequirementschecker"

@@ -4,7 +4,7 @@ When you install SilverStripe by using the installation wizard, SilverStripe wil
 
 ## Requirements
 
-This module requires SilverStripe 4.x framework. For compatibility with SS3, use the 1.x release line.
+This module requires SilverStripe 3.x framework. For compatibility with SS4, use the 2.x release line.
 
 ## Usage
 

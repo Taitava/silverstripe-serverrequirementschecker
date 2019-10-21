@@ -1,11 +1,5 @@
 <?php
 
-namespace Taitava\ServerRequirementsChecker;
-
-use SilverStripe\Control\Director;
-use SilverStripe\Control\HTTPRequest;
-use SilverStripe\Dev\BuildTask;
-
 class ServerRequirementsCheckerTask extends BuildTask
 {
 	

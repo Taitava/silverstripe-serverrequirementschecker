@@ -1,11 +1,5 @@
 <?php
 
-namespace Taitava\ServerRequirementsChecker;
-
-use SilverStripe\Dev\Install\DatabaseAdapterRegistry;
-use SilverStripe\Dev\Install\InstallConfig;
-use SilverStripe\Dev\Install\InstallRequirements;
-
 class ServerRequirementsChecker
 {
 	/**
