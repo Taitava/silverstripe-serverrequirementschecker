@@ -1,5 +1,8 @@
 <?php
 
+namespace Taitava\ServerRequirementsChecker;
+
+use SilverStripe\Dev\SapphireTest;
 
 class TestServerRequirements extends SapphireTest
 {
