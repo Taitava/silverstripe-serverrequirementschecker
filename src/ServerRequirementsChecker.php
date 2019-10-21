@@ -7,6 +7,8 @@ class ServerRequirementsChecker
 	 */
 	private $result;
 	
+	private $errors = [];
+	
 	public function __construct()
 	{
 		$this->check_server_requirements();
@@ -26,7 +28,7 @@ class ServerRequirementsChecker
 		
 		// Check requirements
 		$req = new InstallRequirements;
-		$req->check();
+		$this->errors = $req->check();
 		
 		// Return
 		$this->result = $req;
@@ -51,5 +53,10 @@ class ServerRequirementsChecker
 		{
 			echo 'ALL REQUIREMENTS PASSED';
 		}
+	}
+	
+	public function getErrors()
+	{
+		return $this->errors;
 	}
 }
