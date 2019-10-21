@@ -22,31 +22,11 @@ class ServerRequirementsChecker
 	{
 		if ($this->result) return; // Do not rerun the tests
 		
-		$originalIni = []; // install5.php would record some original php.ini values to this array before modifying the ini values, but we don't need to do this the same way as install5.php would do because we will not modify any php.ini values (= we are not installing, we are just testing the environment).
-		$request = []; // install5.php would use $_REQUEST, but as we are not altering any configuration values and are thus not using any forms, we will just use an empty array instead and stick to the db config we already have.
-		
-		// Discover which databases are available
-		DatabaseAdapterRegistry::autodiscover();
-		
-		// Determine which external database modules are USABLE
-		$databaseClasses = DatabaseAdapterRegistry::get_adapters();
-		foreach ($databaseClasses as $class => $details)
-		{
-			$helper = DatabaseAdapterRegistry::getDatabaseConfigurationHelper($class);
-			$databaseClasses[$class]['hasModule'] = !empty($helper);
-		}
-		
-		$config = new InstallConfig;
-		$databaseConfig = $config->getDatabaseConfig($request, $databaseClasses, true);
+		// No database checks are done in the SS3 version of this module as it would be complicated and not even necessary, as we can assume that we have a working database connection if we can use the application.
 		
 		// Check requirements
 		$req = new InstallRequirements;
-		$req->check($originalIni);
-		
-		if ($databaseConfig)
-		{
-			$req->checkDatabase($databaseConfig);
-		}
+		$req->check();
 		
 		// Return
 		$this->result = $req;
